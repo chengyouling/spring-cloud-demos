@@ -21,7 +21,8 @@ public class ProviderController {
 
     @GetMapping("/sayHello")
     public String sayHello(@RequestParam("name") String name) {
-        System.out.println("name---" + name + "---version----" + version + "-------parameters----" + parameters);
-        return restTemplate.getForObject("http://providerB/sayHello?name={1}", String.class, name);
+        String message = "ProviderA-gray:name---" + name + "---version----" + version + "-------parameters----" + parameters;
+        System.out.println(message);
+        return message + restTemplate.getForObject("http://providerB/sayHello?name={1}", String.class, name);
     }
 }

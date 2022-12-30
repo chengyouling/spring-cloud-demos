@@ -21,7 +21,7 @@ public class ProviderController {
 
     @GetMapping("/sayHello")
     public String sayHello(@RequestParam("name") String name) {
-        System.out.println("name---" + name + "---version----" + version + "-------parameters----" + parameters);
-        return "name---" + name + "---version---" + version + "---parameters---" + parameters;
+        System.out.println("ProviderB-gray:name---" + name + "---version----" + version + "-------parameters----" + parameters);
+        return "ProviderB-gray:name---" + name + "---version---" + version + "---parameters---" + parameters;
     }
 }
