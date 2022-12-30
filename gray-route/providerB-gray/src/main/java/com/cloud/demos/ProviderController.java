@@ -16,9 +16,6 @@ public class ProviderController {
     @Value("${SERVICE_META_PARAMETERS:${service_meta_parameters:${service.meta.parameters:base}}}")
     private String parameters;
 
-    @Autowired
-    private RestTemplate restTemplate;
-
     @GetMapping("/sayHello")
     public String sayHello(@RequestParam("name") String name) {
         System.out.println("ProviderB-gray:name---" + name + "---version----" + version + "-------parameters----" + parameters);
