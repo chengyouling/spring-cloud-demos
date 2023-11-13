@@ -1,0 +1,15 @@
+ ##################eureka config######################################
+server:
+  port: 8001
+
+spring:
+  application:
+    name: eureka-client-consumer
+
+eureka:
+  client:
+    fetch-registry: true
+    register-with-eureka: true
+    service-url:
+      defaultZone: http://127.0.0.1:8088/eureka/
+##################eureka config##############################################
