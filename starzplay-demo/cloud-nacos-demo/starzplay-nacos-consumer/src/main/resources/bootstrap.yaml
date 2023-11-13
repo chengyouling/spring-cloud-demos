@@ -1,0 +1,21 @@
+server:
+  port: 8010
+
+spring:
+  application:
+    name: starzplay-nacos-consumer
+
+  cloud:
+    nacos:
+      discovery:
+        enabled: true
+        server-addr: ${CSE_NACOS_ADDRESS:http://127.0.0.1:8848}
+        service: ${spring.application.name}
+      config:
+        enabled: true
+        server-addr: ${CSE_NACOS_ADDRESS:http://127.0.0.1:8848}
+        file-extension: yaml
+        shared-configs[0]:
+          data-id: consumer.yaml
+          group: DEFAULT_GROUP
+          refresh: true
