@@ -7,9 +7,12 @@ server:
   port: 8002
 
 eureka:
+  instance:
+    lease-renewal-interval-in-seconds: 15
   client:
     fetch-registry: true
     register-with-eureka: true
+    registry-fetch-interval-seconds: 15
     service-url:
-      defaultZone: http://127.0.0.1:8088/eureka/
+      defaultZone: ${EUREKA_SERVER_ADDRESS:http://127.0.0.1:8086/eureka/}
 #############################################################
