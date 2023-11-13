@@ -14,5 +14,5 @@ eureka:
     register-with-eureka: true
     registry-fetch-interval-seconds: 15
     service-url:
-      defaultZone: ${EUREKA_SERVER_ADDRESS:http://127.0.0.1:8086/eureka/}
+      defaultZone: ${EUREKA_SERVER_ADDRESS:http://127.0.0.1:8088/eureka/}
 #############################################################

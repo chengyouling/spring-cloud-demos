@@ -13,6 +13,6 @@ eureka:
     fetch-registry: true
     register-with-eureka: true
     registry-fetch-interval-seconds: 15
-    service-url:
-      defaultZone: ${EUREKA_SERVER_ADDRESS:http://127.0.0.1:8088/eureka/}
+    serviceUrl:
+      defaultZone: ${EUREKA_SERVER_ADDRESS:http://1dd2ccb4-98b3-4f4d-a961-3187d82176dd.nacos.cn-north-4.cse.myhuaweicloud.com:8848/nacos/eureka}
   ##################eureka config##############################################
