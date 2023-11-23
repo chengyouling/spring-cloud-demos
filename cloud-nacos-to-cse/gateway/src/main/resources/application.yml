@@ -1,0 +1,23 @@
+server:
+  port: 9090
+
+spring:
+  application:
+    name: nacos-gateway
+  cloud:
+#    nacos:
+#      discovery:
+#        server-addr: http://127.0.0.1:8848
+#      config:
+#        server-addr: http://127.0.0.1:8848
+
+
+    gateway:
+      enabled: true
+      routes:
+        - id: nacos-consumer
+          uri: lb://nacos-consumer
+          predicates:
+            - Path=/consumer/**
+          filters:
+            - StripPrefix=1
